@@ -1,0 +1,552 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+a
+{
+ text-decoration: none;
+}
+
+li
+{
+list-style: none;
+}
+header
+{
+    width: 100%;
+    background: black;
+    display: flex;
+}
+.Logo
+{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 800;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 1%;
+}
+nav
+{
+    margin-top: 20px;
+    margin-left: 30%;
+}
+.top_nav a
+{
+    color: white;
+    text-align: center;
+    padding:10px 5px;
+    font-size: 15px;
+}
+.top_nav a:hover
+{
+    background: gray;
+    border-radius: 3px;
+}
+.top_nav .icon
+{
+    display: none;
+}
+main
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+main .welcome
+{
+    background: black;
+    text-align: center;
+    padding: 100px 0 600px;
+}
+main .welcome p
+{
+    color:gray;
+    font-size: 20px;
+}
+main .welcome h1
+{
+    color: gray;
+    font-size: 44px;
+}
+#glad
+{
+    color: white;
+}
+.company
+{
+    color: orange;
+    box-shadow: 0 0 5px 2px;
+}
+
+.team
+{
+    background: black;
+    text-align: center;
+    padding: 55px 0 165px 0;
+    color: white;
+}
+.team h1
+{
+    font-size: 44px;
+    padding-bottom: 30px;
+}
+
+.photo img
+{
+    width: 350px;
+    height: 250px;
+    margin: 0px  -30px;
+}
+
+.cards
+{
+    display: flex;
+}
+
+.card
+{
+  margin: 0 40px;
+}
+.named
+{
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.position
+{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.about_position
+{
+    font-size: 17px;
+}
+
+.sub-ttl
+{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 34px;
+    padding-bottom: 60px;
+}
+.pt-3
+{
+    padding-top: 20px;
+    padding-bottom: 80px;
+
+}
+
+
+.sub-tt2
+{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+    font-size: 34px;
+}
+
+
+@media screen and (max-width: 1300px)
+{
+    .top_nav a
+    {
+        display:none;
+    }
+    .top_nav a.icon
+    {
+        float: right;
+        margin-top: -17px;
+        display: block;
+        color:white;
+        font-size: 25px;
+    }
+    nav
+    {
+        width: 100%;
+    }
+    .top_nav.responsive
+    {
+        position: relative;
+        top:50px;
+        left: -200px;
+    }
+    header .top_nav.responsive
+    {
+        height: 340px;
+    }
+    .top_nav.responsive a.icon
+    {
+        position: absolute;
+        top:-50px;
+        right: -200px;
+    }
+    .top_nav.responsive a
+    {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+
+
+
+
+
+    main .welcome p
+    {
+        font-size: 14px;
+    }
+    main .welcome h1
+    {
+        font-size: 25px;
+    }
+    .mw-100
+    {
+        max-width:100%;
+    }
+    .about
+    {
+        flex-direction: column;
+    }
+    .about_right
+    {
+        text-align: center;
+        margin-left: 0;
+    }
+    .about_right li
+    {
+        text-align: left;
+    }
+    .about_right h1
+    {
+        margin-top: 10px;
+        font-size: 25px;
+        margin-left: -69px;
+    }
+
+    .about_right h1:after
+    {
+        display: none;
+    }
+
+
+    .cards
+    {
+        flex-direction: column;
+    }
+
+
+
+}
+@media screen and (max-width: 1200px)
+{
+    nav
+    {
+        margin-left: 20%;
+    }
+
+}
+@media screen and (max-width: 1105px)
+{
+    nav
+    {
+        margin-left: 10%;
+    }
+}
+#slider /*Положение слайдера*/
+{
+    position:relative;
+    text-align: center;
+    top:-560px;
+}
+#slider /*Центровка слайдера*/
+{
+    margin: 0 auto;
+}
+#slides article
+{
+    width: 20%;
+    float: left;
+}
+#slides .image
+{
+    width: 500%;
+    line-height: 0;
+}
+#overflow
+{
+    width: 100%;
+    overflow: hidden;
+}
+article img
+{
+    width: 100%;
+}
+#desktop:checked ~ #slider
+{
+    max-width: 960px;
+}
+#switch1:checked ~ #controls label:nth-child(5),
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4)
+{
+    background: url("prev.png") no-repeat;
+    float: left;
+    margin: 280px 0 0 -84px;
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+
+#switch1:checked ~ #controls label:nth-child(2),
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1)
+{
+    background: url("next.png") no-repeat;
+    float: right;
+    margin: 280px -84px 0 0;
+    display: block;
+    height: 68px;
+    width: 68px;
+}
+label,  a
+{
+    cursor: pointer;
+}
+.all input
+{
+    display: none;
+}
+.all
+{
+    height: 0px;
+}
+#switch1:checked ~ #slides .image
+{
+    margin-left: 0;
+}
+#switch2:checked ~ #slides .image
+{
+    margin-left: -100%;
+}
+#switch3:checked ~ #slides .image
+{
+    margin-left: -200%;
+}
+#switch4:checked ~ #slides .image
+{
+    margin-left: -300%;
+}
+#switch5:checked ~ #slides .image
+{
+    margin-left: -400%;
+}
+#controls
+{
+    margin: -58% 0 0 0;
+    width: 100%;
+    height: 50px;
+}
+#active label
+{
+    border-radius: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #bbb;
+}
+#active
+{
+    margin: 56% 0 0;
+    text-align: center;
+}
+#active label:hover
+{
+    background: #76c8ff;
+    border-color: #777 !important;
+}
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5)
+{
+    background: #18a3dd;
+    border-color: #18a3dd !important;
+}
+#slides .image /*Анимация пролистования*/
+{
+    transition: all 800ms cubic-bezier(0.770, 1.000, 1.000, 1.000);
+}
+#controls label:hover
+{
+    opacity:0.6 ;
+}
+#controls label {
+    transition: opacity 0.2s ease-out;
+}
+
+
+.sub-tt6
+{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 34px;
+}
+
+.pt-7
+{
+    padding-top: 0px;
+    padding-bottom: 45px;
+}
+
+
+
+.client
+{
+    background: black;
+    padding: 100px 0 60px 0 ;
+    color: white;
+    text-align: center;
+}
+
+video
+{
+    border: gray solid 3px;
+}
+
+.sub-tt8
+{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 34px;
+
+}
+.pt-9{
+    padding-top: 8px;
+    padding-bottom: 60px;
+}
+
+
+
+
+.test
+{
+    background: black;
+    text-align: center;
+    color:white;
+    padding-bottom: 100px;
+}
+.test h2
+{
+    margin-top: 80px;
+    text-transform: uppercase;
+}
+.shrift_5
+{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.shrift_9
+{
+    font-size: 18px;
+}
+
+
+#text_slide1, #text_slide2, #text_slide3
+{
+    position: absolute;
+    left: 0px;
+    opacity:0;
+}
+
+
+
+
+footer
+{
+    width: 100%;
+    height: auto;
+    background: white;
+    padding:30px 0 30px 0 ;
+    background: url("zimnee-volshebstvo.jpg");
+}
+
+.foot
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.foot img
+{
+    margin-left: 12px;
+}
+.foot img:hover
+{
+    opacity:0.9 ;
+}
+
+.sub-tt854
+{
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+    font-size: 34px;
+}
+
+.pt-945{
+    padding-bottom: 25px;
+    padding-top: 70px;
+
+}
+
+
+.sub-tt8541
+{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+.pt-9451{
+    padding-bottom: 35px;
+    padding-top: 8px;
+}
+
+.sub-tt8542
+{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+.pt-9452
+{
+    padding-top: 8px;
+}

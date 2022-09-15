@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>SHOP</title>
+    <meta name="description" content=""/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body data-page="catalog">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li class="active"><a href="index.html">Каталог</a></li>
+            <li><a href="cart.html">Корзина<span id="total-cart-count" class="badge"></span></a></li>
+			<li><a href=" ../index.html">GYM</a></li>
+        </ul>
+        <br/>
+        <ul id="goods" class="list-unstyled">
+		<img src="" alt="" />
+        </ul>
+    </div>
+
+    <script id="catalog-template3" type="text/template3">
+        <% _.each(goods, function(good) { %>
+            <li class="good-item row">
+                <div class="col-md-4">
+                    <img class="good-item__img" src="<%- good.img %>" />
+                </div>
+                <div class="col-md-8">
+                    <div class="good-item__id"></div>
+                    <div class="good-item__name"><%- good.name %></div>
+                    <div class="good-item__price"><%= good.price %> грн.</div>
+                    <button 
+                        class="good-item__btn-add btn btn-info btn-sm js-add-to-cart"
+                        data-id="<%= good.id %>"
+                        data-name="<%- good.name %>"
+                        data-price="<%= good.price %>"
+                    >Добавить в корзину</button>
+                </div>
+            </li>
+        <% }); %>
+    </script>
+
+    <script src="js/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="js/vendor/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/vendor/underscore.min.js" type="text/javascript"></script>
+    <script src="js/modules/catalog.js" type="text/javascript"></script>
+    <script src="js/modules/cart.js" type="text/javascript"></script>
+    <script src="js/modules/compare.js" type="text/javascript"></script>
+    <script src="js/modules/main.js" type="text/javascript"></script>
+</body>
+</html>

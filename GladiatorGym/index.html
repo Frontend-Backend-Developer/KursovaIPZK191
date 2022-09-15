@@ -1,0 +1,257 @@
+<?php
+session_start();
+if (!$_SESSION['user']) {
+    header('Location: /');
+}
+?>
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GLADIATOR GYM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="flexed.css">
+    <link rel="stylesheet" href="FRONT.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <a href="#gladiator" id="glad" name="upers">GLADIATOR</a>
+        </div>
+        <nav>
+            <div class="top_nav" id="top_my_nav">
+                <a href="#today">УСЛУГИ</a>
+                <a href="#treners">ТРЕНЕРА</a>
+                <a href="#services">СЕРВИС</a>
+                <a href="#video">ВИДЕО</a>
+                <a href="#reviews">ОТЗЫВЫ</a>
+                <a href="#contact">КОНТАКТЫ</a>
+
+                <a href="Shop/index.html">МАГАЗИН</a>
+
+                <a href="register.php">РЕГИСТРАЦИЯ</a>
+                <a href="vendor/logout.php" class="logout">ВХОД/ВЫХОД</a>
+                <a href="#" id="menu" class="icon">&#9776;</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="welcome">
+            <h1><a name="gladiator" >WELCOME TO</a> <span class="company">GLADIATOR GYM</span></h1>
+            <br>
+            <p>BUILD YOUR BODY TODAY!</p>
+        </div>
+        <div class="all">
+            <input checked type="radio" name="respond" id="desktop">
+            <article id="slider">
+                <input checked type="radio" name="slider" id="switch1">
+                <input type="radio" name="slider" id="switch2">
+                <input type="radio" name="slider" id="switch3">
+                <input type="radio" name="slider" id="switch4">
+                <input type="radio" name="slider" id="switch5">
+
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="image">
+                            <article><img src="1.jpg" alt="1"></article>
+                            <article><img src="2.jpg" alt="2"></article>
+                            <article><img src="3.jpg" alt="3"></article>
+                            <article><img src="4.jpg" alt="4"></article>
+                            <article><img src="5.jpg" alt="5"></article>
+                        </div>
+                    </div>
+                </div>
+                <div id="controls">
+                    <label for="switch1"></label>
+                    <label for="switch2"></label>
+                    <label for="switch3"></label>
+                    <label for="switch4"></label>
+                    <label for="switch5"></label>
+                </div>
+
+                <div id="active">
+                    <label for="switch1"></label>
+                    <label for="switch2"></label>
+                    <label for="switch3"></label>
+                    <label for="switch4"></label>
+                    <label for="switch5"></label>
+                </div>
+            </article>
+        </div>
+
+        <div class="wrapper">
+            <div class="about">
+                <div class="about_left">
+                    <img  class="mw-100" src="123.png" alt="sport">
+                </div>
+
+                <div class="about_right">
+                    <h1><a name="today">Приходи прямо </a><strong>сегодня!</strong></h1>
+                    <p>Тренировки в тренажерном зале помогут реализовать широкий спектр задач:</p>
+                    <ul>
+                        <li><em class="shrift">&#10004; Набор качественной мышечной массы</em></li>
+                        <li><em class="shrift">&#10004; Сброс лишнего веса</em></li>
+                        <li><em class="shrift">&#10004; Хорошие настроение</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="team">
+            <div class="wrapper">
+                <h2 class="sub-ttl pt-2"><a name="treners">ТРЕНЕРА</a></h2>
+            <div class="line"></div>
+            <div class="cards">
+                <div class="card">
+                    <div class="photo">
+                        <img src="15303509929.png">
+                    </div>
+
+                    <h4 class="named">Дмитрович Дмитро</h4>
+                    <p class="position">ТРЕНЕР ПО БОДИБИЛДИНГУ</p>
+                    <p class="about_position"><em>Пауэрлифтер. Десять лет стажа в тренировках.</em></p>
+                </div>
+
+                <div class="card">
+                    <div class="photo">
+                        <img src="15303509929.png">
+                    </div>
+                    <h4 class="named">Иваненко Иван</h4>
+                    <p class="position">ТРЕНЕР ПО БОДИБИЛДИНГУ</p>
+                    <p class="about_position"><em>Пауэрлифтер. Десять лет стажа в тренировках.</em></p>
+                </div>
+
+                <div class="card">
+                    <div class="photo">
+                        <img src="15303509929.png">
+                    </div>
+                    <h4 class="named">Кузьменко Кузьма</h4>
+                    <p class="position">ТРЕНЕР ПО БОДИБИЛДИНГУ</p>
+                    <p class="about_position"><em>Пауэрлифтер. Десять лет стажа в тренировках.</em></p>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+
+
+        <div class="services">
+            <div class="wrapper">
+                <h2 class="sub-tt2 pt-3"><a name="services">СЕРВИС</a></h2>
+                <div class="line"></div>
+                <p><i>Если Вам нужно обновить свою тренировочную экипировку, то мы всегда рады помочь Вам в этом. У нас Вы можете приобрести:спортивное питание от мировых брендов, тренировочную одежду, специальную обувь для занятий спортом, покушать после тяжелой тренировки.</i></p>
+            <div class="services_cards">
+
+                <div class="services_card">
+                    <img src="Слой-03.png" alt="market">
+                    <h4>МАГАЗИН</h4>
+                    <p>В нашем магазине вы найдете все, что нужно для эффективных тренировок.</p>
+                </div>
+
+
+
+                    <div class="services_card">
+                        <img src="Слой-04.png" alt="Coffee">
+                        <h4>КАФЕ</h4>
+                        <p>Никакой вредной пищи, только блюда, приготовленные фитнес рецептами.</p>
+                    </div>
+
+
+
+                    <div class="services_card">
+                        <img src="Слой-05.png" alt="Box">
+                        <h4>ЕДИНОБОРТСВА</h4>
+                        <p>Тренера проводят занятие по следующим направлениям:бокс, MMA, борьба.</p>
+                    </div>
+
+
+
+                    <div class="services_card">
+                        <img src="Слой-06.png" alt="Fitness">
+                        <h4>ФИТНЕС</h4>
+                        <p>Выполняется комплекс из не очень сложных, но чрезвычайно эффективных упражнений.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="client">
+            <div class="wrapper">
+                <h2 class="sub-tt6 pt-7"><a name="video">ПОСМОТРИ НАШЕ ВИДЕО</a></h2>
+                <div class="line_1"></div>
+
+                <div class="clients">
+                    <video width="50%" height="50%" controls="controls" poster="thumb-29qxzq.jpg">
+                        <source src="Мотивация СПОРТ лучшая.mp4" >
+                        <a href="Мотивация СПОРТ лучшая.mp4"> Скачайте видео</a>.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="test">
+            <div class="wrapper">
+                <h2 class="sub-tt8 pt-9"><a name="reviews">Отзывы наших клиентов</a></h2>
+                <div class="line_6"></div>
+
+
+                <div id="text_slide1">
+                    <p class="shrift_5">Очень хороший зал. Современные тренажёры, есть душ, Но самое приятное что очень приятный коллектив, на рецепшине всегда рады.</p>
+                    <p class="shrift_9"><em>Вероника Сергеевна</em></p>
+                </div>
+
+                <div id="text_slide2">
+                    <p class="shrift_5">Хороший спортзал с отличным персоналом. Есть большая раздевалка с душем. Этот зал именно то место! Всем советую, приходите!!</p>
+                    <p class="shrift_9"><em>Андрей Сергеевич</em></p>
+                </div>
+
+                <div id="text_slide3">
+                    <p class="shrift_5">Не ожидал, что меня встретят ТАК приветливо и тепло. Начиная с администраторов и заканчивая тренерами. Все очень общительные!!</p>
+                    <p class="shrift_9"><em>Валентин Стрыкало</em></p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <h2 class="sub-tt854 pt-945"><em><a name="contact">GLADIATOR GYM</a></em></h2>
+            <p class="sub-tt8541 pt-9451"><em>Live Internationally = Live Authentically</em><p>
+        <div class="foot">
+            <a href="https://vk.com/dimka_drobotun"><img src="unnamed123.png" alt="vk"></a>
+            <a href="https://twitter.com/login?lang=ru"><img src="crop123.png" alt="twitter"></a>
+            <a href="https://www.facebook.com/dima.drobotun"><img src="facebook_logos_PNG19748.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/dmytro_drobotun/?hl=ru"><img src="50Xh_463.png " alt="instagram"></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox"><img src="google123.png " alt="google"></a>
+        </div>
+            <p class="sub-tt8542 pt-9452"><em>Themes / Memoirs / Contacts</em></p>
+            <a href="#upers" class="up_1"><img src="Knopka-naverh.png" alt="Up"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <form>
+        <h2 style="margin: 10px 0;"><?= $_SESSION['user']['full_name'] ?></h2>
+        <a href="#"><?= $_SESSION['user']['email'] ?></a>
+    </form>
+    <!D. D. Y.>
+    <!07.02.2020>
+	
+	<!D. D. Y.>
+    <!12.06.2020>
+
+</body>
+</html>
